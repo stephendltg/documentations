@@ -1,0 +1,1475 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>vbox serveur debian</title></head><body><article class="markdown-body"><h1 id="monter-son-serveur-web-sous-virtualbox"><a name="user-content-monter-son-serveur-web-sous-virtualbox" href="#monter-son-serveur-web-sous-virtualbox" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>MONTER SON SERVEUR WEB ( sous virtualbox )</h1>
+<p>Principe:  Monter un serveur web sous debian dans une machine virtuelle afin de remplacer l&rsquo;utilisation du logiciel MAMP et reproduire un véritable serveur Web. Ce tutoriel peut servir aussi pour monter un serveur web sur une machine local en passant bien entendu tout ce qui concerne les chapitres sous virtualbox.</p>
+<h2 id="commandes-terminal-de-base-unix"><a name="user-content-commandes-terminal-de-base-unix" href="#commandes-terminal-de-base-unix" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>COMMANDES TERMINAL DE BASE UNIX</h2>
+<h3 id="commandes-listing-fichiers-et-repertoires"><a name="user-content-commandes-listing-fichiers-et-repertoires" href="#commandes-listing-fichiers-et-repertoires" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Commandes listing fichiers et repertoires</h3>
+<ul>
+<li><code>ls</code>    : Liste des fichiers et dossiers</li>
+<li><code>ls-a</code>  : Idem <code>ls</code> avec fichiers cachés</li>
+<li><code>ls-l</code>  : Idem  <code>ls</code> avec plus de détails ( permissions, propriétaire, etc&hellip;)</li>
+</ul>
+<h3 id="commandes-sur-fichiers-et-repertoires"><a name="user-content-commandes-sur-fichiers-et-repertoires" href="#commandes-sur-fichiers-et-repertoires" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Commandes sur fichiers et repertoires</h3>
+<ul>
+<li><code>cd</code>    : Changer de répertoire ex: ` cd /Users/ ``</li>
+<li><code>cp</code>    : Copier un fichier ex: <code>cp /Users/Stephen/Documents/index.html Users/Stephen/Document/Sites/index.html</code></li>
+<li>
+<p><code>mv</code>    : Dépacler un fichier d&rsquo;un repertoire vers un autre</p>
+</li>
+<li>
+<p><code>touch</code> : Créer un fichier ex: <code>touch index.html</code> </p>
+</li>
+<li>
+<p><code>echo</code>  : Un print vers écran terminal, si <code>&gt;</code> , on écrit vers un fichier. ex: <code>echo "Bonjour à tous" &gt; index.html</code></p>
+</li>
+<li>
+<p><code>rm</code>    : Supprimer un fichier</p>
+</li>
+<li><code>rmdir</code> : Supprimer un repertoire</li>
+<li><code>mkdir</code> : Créer un repertoire</li>
+</ul>
+<h3 id="commandes-supplementaires"><a name="user-content-commandes-supplementaires" href="#commandes-supplementaires" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Commandes supplémentaires</h3>
+<ul>
+<li><code>df -h</code>   : Espace disque</li>
+<li><code>man</code>   : Indique la correspondance d&rsquo;une commande ex: <code>man ls</code></li>
+<li><code>pwd</code>   : Affiche le chemin absolue où vous vous trouvez</li>
+<li><code>top</code>   : Processus en cours</li>
+<li><code>df -h</code> : Affiche la liste des volumes montés</li>
+<li><code>chown</code> : Changer le propriétaire du fichiers ( utiliser <code>-R</code> pour la recursivité )</li>
+<li><code>ln -s &lt;nom du fichier ou répertoire de destination &gt; &lt;nom du lien symbolique&gt;</code>  : Créer un liens symbolique vers un répertoire ou un fichier.</li>
+</ul>
+<h3 id="commandes-apache2"><a name="user-content-commandes-apache2" href="#commandes-apache2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Commandes Apache2</h3>
+<p>Les fichier de configuration d&rsquo;apache /etc/apache2/apache2.conf .<br />
+Les fichiers log se trouve dans le dossier /var/log/apache2/ .<br />
+Le dossier par défaut des sites /var/www/html/</p>
+<ul>
+<li><code>service apache2 status</code> : Etat du service apache.</li>
+<li><code>service apache2 restart</code>: Redémarrer apache.</li>
+<li><code>service apache2 stop</code>   : Stopper apache.</li>
+<li><code>service apache2 start</code>  : Démarrer apache.</li>
+</ul>
+<h3 id="commandes-mysql"><a name="user-content-commandes-mysql" href="#commandes-mysql" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Commandes MYSQL</h3>
+<p>Les fichiers de configuration de mysql se trouve dans le dossier /etc/mysql/ .<br />
+Le fichier log se trouve dans /var/log/mysql/error.log .</p>
+<ul>
+<li><code>service mysql status</code> : Etat du service mysql.</li>
+<li><code>service mysql stop</code>   : Stopper mysql.</li>
+<li><code>service mysql start</code>  : Démarrer mysql.</li>
+</ul>
+<h3 id="commandes-php5"><a name="user-content-commandes-php5" href="#commandes-php5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Commandes PHP5</h3>
+<p>Le fichier ini se trouve dans /etc/php5/apache2/php.ini</p>
+<ul>
+<li><code>php -v</code>               : Version de php installé.</li>
+</ul>
+<h3 id="apt-get-gestion-des-applications"><a name="user-content-apt-get-gestion-des-applications" href="#apt-get-gestion-des-applications" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>APT-GET ( Gestion des applications )</h3>
+<p>apt-get permet d&rsquo;effectuer l&rsquo;installation et la désinstallation de paquets en provenance d&rsquo;un dépôt APT. Le log des actions de apt-get se trouve dans /var/log/apt ( à la fin de chaque mois ce fichier est archivé, utilisez &lsquo;zless&rsquo; pour ouvrir un tel fichier).</p>
+<ul>
+<li>
+<p><code>apt-get update</code>                        : Mise à jour des dépôts.</p>
+</li>
+<li>
+<p><code>apt-get install &lt;paquet(s)&gt;</code>     : Installations d&rsquo;un ou plusieurs paquets. </p>
+</li>
+<li><code>apt-get -f install &lt;paquet(s)&gt;</code>  : Réparation d&rsquo;un paquets.</li>
+<li><code>apt-cache search &lt;paquet(s)&gt;</code>      : Chercher un paquet dans les dépôts.</li>
+<li>
+<p><code>dpkg -l &lt;paquet(s)&gt;</code>             : Chercher un paquet installé.</p>
+</li>
+<li>
+<p><code>apt-get remove &lt;paquet(s)&gt;</code>      : Supprimer un ou plusieur paquets (conserve les fichiers de configurations).</p>
+</li>
+<li><code>apt-get autoremove &lt;paquet(s)&gt;</code>  : Supprimer un ou plusieurs paquets avec ses dépendances (conserve les fichiers de configurations).</li>
+<li><code>apt-get purge &lt;paquet(s)&gt;</code>       : Supprimer un ou plusieurs paquets avec les fichiers de configuration.</li>
+<li>
+<p><code>apt-get autoremove --purge &lt;paquet(s)&gt;</code> : Supprimer un ou plusieurs paquets avec ses dépendances et ses fichiers de configurations.</p>
+</li>
+<li>
+<p><code>apt-get install &lt;paquet(s)&gt; -V</code>   : Mise à jour d&rsquo;un ou plusieurs paquets déjà installés.</p>
+</li>
+<li><code>apt-get upgrade</code>                  : Mise à jour de tous les paquets installés sur le système avec leurs dernière versions.</li>
+<li><code>apt-get dist-upgrade</code>             : Idem upgrade mais installe de nouveaux paquets si nécessaire.</li>
+<li><code>apt-get clean</code>                    : Supprimer la totalité des paquets présents dans /var/cache/apt/archives pour récuperer de l&rsquo;espace disque.</li>
+</ul>
+<hr />
+<h2 id="instalation-du-serveur-web"><a name="user-content-instalation-du-serveur-web" href="#instalation-du-serveur-web" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>INSTALATION DU SERVEUR WEB</h2>
+<h3 id="pre-requis"><a name="user-content-pre-requis" href="#pre-requis" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pré-requis:</h3>
+<ul>
+<li>Avoir une connexion internet.</li>
+<li>Télécharger et installer VirtualBox ( <a href="https://www.virtualbox.org">https://www.virtualbox.org</a> ). VirtualBox est un logiciel de création et de gestion de machine virtuelle.</li>
+<li>Télécharger iso de debian ( <a href="https://www.debian.org/">https://www.debian.org/</a> ). Debian est un système d&rsquo;exploitation.</li>
+</ul>
+<h3 id="creation-dun-machine-virtuelle-vbox"><a name="user-content-creation-dun-machine-virtuelle-vbox" href="#creation-dun-machine-virtuelle-vbox" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Création d&rsquo;un machine virtuelle ( vbox )</h3>
+<p>Lancer VirtualBox et cliquer sur &ldquo;Nouvelle&rdquo;.</p>
+<p>Dans la boîte de dialogue, indiquer le Nom de la machine virtuelle puis le type &ldquo;Linux&rdquo; et ensuite choisir la version &ldquo;debian&rdquo;.<br />
+Puis sélectionner la taille de la mémoire a allouer, 512 MO.<br />
+Créer un disque virtuel.<br />
+Format du disque virtuel : VDI.<br />
+Sélectionner &ldquo;Dynamiquement alloué&rdquo;.<br />
+Nommer le disque dur virtuel et definir la taille du disque à 8GO.</p>
+<p>Cliquer sur &ldquo;Configuration&rdquo; puis &ldquo;Stockage&rdquo; et dans controleur IDE, affecter l&rsquo;image iso télécharger de la version debian téléchargée.</p>
+<p>Puis démarrer la machine virtuelle.</p>
+<h3 id="installation-de-debian"><a name="user-content-installation-de-debian" href="#installation-de-debian" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation de debian</h3>
+<p><img alt="Menu de démarrage, choisir &quot;install&quot;." src="IMG/Debian" title="- Boot.png" /></p>
+<h4 id="configuration-langue-du-serveur"><a name="user-content-configuration-langue-du-serveur" href="#configuration-langue-du-serveur" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuration langue du serveur:</h4>
+<p><img alt="La langue du serveur." src="IMG/Debian" title="- Lang.png" /><br />
+<img alt="Situation géographique pour le serveur." src="IMG/Debian" title="- Geo.png" /><br />
+<img alt="La langue du clavier." src="IMG/Debian" title="- Keyboard.png" /></p>
+<h4 id="configuration-du-reseau"><a name="user-content-configuration-du-reseau" href="#configuration-du-reseau" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuration du réseau:</h4>
+<p><img alt="Nom du serveur." src="IMG/Debian" title="- NetworkConfig.png" /><br />
+<img alt="Nom de domaine du serveur." src="IMG/Debian" title="- NetworkDomain.png" /></p>
+<h4 id="configuration-root"><a name="user-content-configuration-root" href="#configuration-root" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuration root:</h4>
+<p><img alt="Mot de passe root." src="IMG/Debian" title="- RootPassword.png" /></p>
+<h4 id="configuration-dun-utilisateur"><a name="user-content-configuration-dun-utilisateur" href="#configuration-dun-utilisateur" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuration d&rsquo;un utilisateur</h4>
+<p><img alt="Nom complet de l'utilisateur." src="IMG/Debian" title="- NameSuperUser.png" /><br />
+<img alt="Login de l'utilisateur." src="IMG/Debian" title="- LoginSuperUser.png" /><br />
+<img alt="Password de l'utilisateur." src="IMG/Debian" title="- PasswordSuperUser.png" /></p>
+<h4 id="configuration-du-disque-dur"><a name="user-content-configuration-du-disque-dur" href="#configuration-du-disque-dur" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuration du disque dur:</h4>
+<p><img alt="Choisir mode &quot;assisté - Utiliser disque entier&quot;." src="IMG/Debian" title="- HardDisk.png" /><br />
+<img alt="Choix du disque dur." src="IMG/Debian" title="- HardDiskComfirm.png" /><br />
+<img alt="Type de partitionnement: &quot;Tout dans une seule partition&quot;." src="IMG/Debian" title="- HardDiskPartition.png" /><br />
+<img alt="Terminer le partitionnement et appliquer les changements." src="IMG/Debian" title="- HardDiskPartitionValid.png" /><br />
+<img alt="Appliquer les changements sur le disque." src="IMG/Debian" title="- HardDiskPartitionConfirm.png" /></p>
+<h4 id="configuration-des-paquets-applications"><a name="user-content-configuration-des-paquets-applications" href="#configuration-des-paquets-applications" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuration des paquets ( applications ):</h4>
+<p><img alt="Choix du miroir debian." src="IMG/Debian" title="- PkgLang.png" /><br />
+<img alt="Choix du serveur ftp pour les paquets." src="IMG/Debian" title="- PkgUrl.png" /></p>
+<h4 id="configuration-du-proxy"><a name="user-content-configuration-du-proxy" href="#configuration-du-proxy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuration du proxy:</h4>
+<p><img alt="Choix du proxy." src="IMG/Debian" title="- Proxy.png" /></p>
+<h4 id="configuration-du-systeme"><a name="user-content-configuration-du-systeme" href="#configuration-du-systeme" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuration du systeme:</h4>
+<p><img alt="Choisir uniquement &quot;utilitaires usuels du systeme&quot;." src="IMG/Debian" title="- ConfigInstall.png" /></p>
+<h4 id="configuration-de-grub-amorcage-de-linux"><a name="user-content-configuration-de-grub-amorcage-de-linux" href="#configuration-de-grub-amorcage-de-linux" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuration de GRUB ( amorçage de linux ):</h4>
+<p><img alt="Installer Grub: OUI." src="IMG/Debian" title="- Grub.png" /><br />
+<img alt="Choix du disque pour installer Grub" src="IMG/Debian" title="- GrubDisk.png" /></p>
+<h4 id="fin-dinstallation"><a name="user-content-fin-dinstallation" href="#fin-dinstallation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fin d&rsquo;installation :</h4>
+<p><img alt="Fin de l'installation de debian - reboot du serveur" src="IMG/Debian" title="- finish.png" /><br />
+<img alt="Ecran une fois demarrer" src="/home/stephendel/Dropbox/PROJET/WORKFLOW/DOCS/APPLE/IMG/Debian.png" /></p>
+<h3 id="installation-dun-environnement-amp"><a name="user-content-installation-dun-environnement-amp" href="#installation-dun-environnement-amp" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation d&rsquo;un environnement AMP</h3>
+<p>Maintenant que le systeme sur le serveur est configuré nous allons installer Apache - MySQL - PHP.</p>
+<p>Commencer par vous connecter en root afin de facilité l&rsquo;entrée des directives.</p>
+<pre><code>Login : root
+Password : *****
+</code></pre>
+<p>Puis nous allons mettre à jour les dépôts des paquets:</p>
+<pre><code>apt-get update
+</code></pre>
+<h4 id="installation-apache"><a name="user-content-installation-apache" href="#installation-apache" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation Apache</h4>
+<p>Executer la commmande:</p>
+<pre><code>apt-get install apache2
+</code></pre>
+<p>A la fin de l&rsquo;installation, vérifions le fonctionnement d&rsquo;apache avec la commande:</p>
+<pre><code>service apache2 status
+</code></pre>
+<p>Le serveur doit répondre :</p>
+<pre><code>*apache2 is running
+</code></pre>
+<p>Pour ne pas avoir lors d&rsquo;une erreur voir s&rsquo;afficher les informations du serveur, edite le fichier de configuration d&rsquo;apache:</p>
+<pre><code>nano /etc/apache2/apache2.conf
+</code></pre>
+<p>Puis ajouter le ligne suivante à la fin du fichier:</p>
+<pre><code>ServerSignature Off
+</code></pre>
+<p>Et redemmarre le serveur apache</p>
+<pre><code>service apache2 restart
+</code></pre>
+<h4 id="installation-de-php5"><a name="user-content-installation-de-php5" href="#installation-de-php5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation de PHP5</h4>
+<p>Executer la commande afin d&rsquo;installer php5 ainsi que le module apache permettant d&rsquo;interpréter les script PHP:</p>
+<pre><code>apt-get install php5 libapache2-mod-php5
+</code></pre>
+<p>Executer la commande suivante pour vérifier l&rsquo;installation de PHP ( On obtient le numéro de version de php).</p>
+<pre><code>php -v
+</code></pre>
+<p>Ouvrir le fichier php.ini:</p>
+<pre><code>nano /etc/php5/apache2/php.ini
+</code></pre>
+<p>Puis modifier les valeur suivantes:</p>
+<pre><code># Taille maximum des fichiers à uploader (2MB par défaut)
+upload_max_filesize = 10M
+
+# Activation de l'UTF-8 par défaut
+mbstring.language=UTF-8
+mbstring.internal_encoding=UTF-8
+mbstring.http_input=UTF-8
+mbstring.http_output=UTF-8
+mbstring.detect_order=auto
+</code></pre>
+<p>On redemarre apache:</p>
+<pre><code>service apache2 restart
+</code></pre>
+<h4 id="installation-de-mysql"><a name="user-content-installation-de-mysql" href="#installation-de-mysql" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation de MYSQL</h4>
+<p>Executer la commande suivante:</p>
+<pre><code>apt-get install mysql-server
+</code></pre>
+<p>Lors de l&rsquo;installation, il sera demandé un mot de passe pour l&rsquo;accès à MYSQL.</p>
+<p>Executer la commmande suivante afin de vérifier que MYSQL est bien installé.</p>
+<pre><code>service mysql status
+</code></pre>
+<h4 id="installation-de-phpmyadmin"><a name="user-content-installation-de-phpmyadmin" href="#installation-de-phpmyadmin" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation de phpmyadmin</h4>
+<p>Afin de facilité la gestion des base de données dans mysql nous allons installé &ldquo;phpmyadmin&rdquo;.</p>
+<p>Executer la commande suivante:</p>
+<pre><code>apt-get install php5-mysql phpmyadmin
+</code></pre>
+<p>Et nous allons redemarrer apache:</p>
+<pre><code>service apache2 restart
+</code></pre>
+<p>Nous allons créer un lien symbolique vers phpmyadmin:</p>
+<pre><code>ln -s /usr/share/phpmyadmin/ /var/www/html/phpmyadmin
+</code></pre>
+<p>Puis ajouter l&rsquo;utilisateur connecté au groupe &ldquo;www-data&rdquo; ( nom utilisé par apache)</p>
+<pre><code>usermod -a -G www-data &lt;nom_de_votre_utilisateur&gt;
+chown -R &lt;nom_de_votre_utilisateur&gt;:www-data /var/www/html
+</code></pre>
+<h3 id="mise-en-place-de-lacces-serveur-adresse-ipfixe"><a name="user-content-mise-en-place-de-lacces-serveur-adresse-ipfixe" href="#mise-en-place-de-lacces-serveur-adresse-ipfixe" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mise en place de l&rsquo;acces serveur, adresse ipfixe</h3>
+<p>Principe : Affecter une adresse IP fixe au serveur web via une deuxième carte réseau.</p>
+<h4 id="sous-virtualbox"><a name="user-content-sous-virtualbox" href="#sous-virtualbox" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sous Virtualbox:</h4>
+<p>Eteindre la machine virtuelle.</p>
+<p>Dans VirtualBox puis &ldquo;préférences&rdquo; et ensuite dans &ldquo;réseau&rdquo;, aller dans « réseau hôte uniquement » .</p>
+<p>Créer un nouveau réseau &ldquo;+&rdquo;:</p>
+<pre><code>Nom: vboxnet0
+carte:
+adresse ipv4: 10.0.0.1
+masque: 255.255.255.0
+
+serveur DHCP:
+adresse serveur: 10.0.0.100
+masque : 255.255.255.0
+limite inférieur: 10.0.0.1
+limite supérieur : 10.0.0.254
+</code></pre>
+<h4 id="configuration-de-la-machine-virtuelle"><a name="user-content-configuration-de-la-machine-virtuelle" href="#configuration-de-la-machine-virtuelle" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuration de la machine virtuelle:</h4>
+<p>Ajouter une carte réseau:</p>
+<pre><code>mode d’accès: réseau privé honte
+nom: vboxnet0
+</code></pre>
+<h4 id="configuration-du-serveur-debian"><a name="user-content-configuration-du-serveur-debian" href="#configuration-du-serveur-debian" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Configuration du serveur Debian:</h4>
+<p>Démarrer la machine virtuelle puis executer la commande sous root: </p>
+<pre><code>pico /etc/network/interfaces
+</code></pre>
+<p>ajouter à la fin du fichier:</p>
+<pre><code>auto eth1
+
+iface eth1 inet static
+address 10.0.0.2 (-&gt; adresse ip fixe du serveur)
+netmask 255.255.255.0
+</code></pre>
+<p>Pour prendre en compte la nouvelle configuration:</p>
+<pre><code>/etc/init.d/networking restart
+</code></pre>
+<p>Accèder à 10.0.0.2 depuis votre naviguateur pour vérifier que tout fonctionne, vous devriez voir la page web par défaut d&rsquo;apache.</p>
+<h3 id="installation-dun-serveur-samba-pour-le-partage-des-fichiers"><a name="user-content-installation-dun-serveur-samba-pour-le-partage-des-fichiers" href="#installation-dun-serveur-samba-pour-le-partage-des-fichiers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation d&rsquo;un serveur samba pour le partage des fichiers</h3>
+<p>Afin de partager les fichiers du sites, il faut un accès au serveur. Pour cela nous allons utiliser le serveur Samba.</p>
+<p>Installer Samba:</p>
+<pre><code>apt-get install samba
+</code></pre>
+<p>Créer un compte de connexion samba (<code>&lt;user&gt;</code>: utilisateur Samba ):</p>
+<pre><code>smbpasswd -a &lt;user&gt;
+</code></pre>
+<p>Nous allons modifier le fichier de configuration Samba:</p>
+<pre><code>pico /etc/samba/smb.conf
+</code></pre>
+<p>A la fin du fichier ajouter (<code>&lt;adresse_ip_hote&gt;</code> : addresse IP fixe du Serveur ):</p>
+<pre><code>hosts allow = 127.0.0.1 &lt;adresse_ip_hote&gt;/24
+</code></pre>
+<p>Puis les lignes suivantes qui vont définir le partage (<code>&lt;user&gt;</code>: utilisateur Samba ) :</p>
+<pre><code>[mes-sites]
+path = /var/www/html
+valid users = &lt;user&gt;
+available = yes
+browsable = yes
+public = yes
+writable = yes
+create mask = 0777
+create directory mask = 0777
+comment = Mes sites
+</code></pre>
+<h4 id="pour-se-connecter-au-serveur-debian-sous-macos"><a name="user-content-pour-se-connecter-au-serveur-debian-sous-macos" href="#pour-se-connecter-au-serveur-debian-sous-macos" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pour se connecter au serveur debian sous macos :</h4>
+<p>&ldquo;Finder&rdquo; puis &ldquo;aller&rdquo; dans la barre des tâches, ensuite &ldquo;se connecter au serveur&rdquo;. </p>
+<p>Adresse du serveur : <code>&lt;adresse_ip_hote&gt;/mes-sites</code> (<code>&lt;adresse_ip_hote&gt;</code> : addresse IP fixe du Serveur )<br />
+Utilisateur : <code>&lt;user&gt;``
+Password :</code>mot de passe créer pour <user>`    </p>
+<hr />
+<h2 id="allez-plus-loin"><a name="user-content-allez-plus-loin" href="#allez-plus-loin" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ALLEZ PLUS LOIN !</h2>
+<h3 id="php5-et-les-emails"><a name="user-content-php5-et-les-emails" href="#php5-et-les-emails" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>PHP5 ET LES EMAILS</h3>
+<p>Parfois nous avons besoin de tester que l&rsquo;envoi d&rsquo;emails depuis les scripts php se passe comme voulu. Pour cela nous allons créer un faux serveur SMTP. Au lieu d&rsquo;envoyer les emails vers un serveur pop ou imap, nous allons écrire les emails envoyés dans un fichier log. </p>
+<p>Commencons par créer notre script:</p>
+<pre><code>pico /usr/local/bin/phpfakesmtp
+</code></pre>
+<p>Dans le fichier créer nous allons entrer ces lignes:</p>
+<pre><code>#!/usr/bin/php
+&lt;?php
+/**
+ * FAKE SMTP FOR DEVELOPMENT LOCAL SERVER : On ecrit les emails dans un fichier log
+ */
+$logfile = '/tmp/fake_smtp.log';
+
+// On récupère le contenu de l'email
+$pointer = fopen( 'php://stdin' , 'r' );
+$mail = '';
+while ( $line = fgets($pointer) ) { $mail .= $line; }
+
+// On ecrit dans le fichier log
+file_put_contents( $logfile , "\n---------- NEW MESSAGE [".date('Y-m-d H:i:s')."] ----------\n".$mail."\n" , FILE_APPEND );
+?&gt;
+</code></pre>
+<p>Nous allons rendre notre script excecutable:</p>
+<pre><code>chmod +x /usr/local/bin/phpfakesmtp
+</code></pre>
+<p>Puis nous allons modifier le fichier ini de PHP dans la section [mail function]:</p>
+<pre><code>[mail function]
+; For Win32 only.
+; http://php.net/smtp
+;SMTP = localhost
+; http://php.net/smtp-port
+;smtp_port = 25
+
+; For Win32 only.
+; http://php.net/sendmail-from
+;sendmail_from = postmaster@localhost
+
+; For Unix only.  You may supply arguments as well (default: "sendmail -t -i").
+; http://php.net/sendmail-path
+sendmail_path = /usr/local/bin/phpfakesmtp
+</code></pre>
+<p>On redemarre Apache2 pour prendre en compte:</p>
+<pre><code>service apache2 restart
+</code></pre>
+<p>L&rsquo;accès du fichier se trouve dans /tmp/fake_smtp.log:</p>
+<pre><code>tail -f /tmp/fake_smtp.log (accès aux dernière ligne du fichier)
+</code></pre>
+<h3 id="apache2-et-ses-modules"><a name="user-content-apache2-et-ses-modules" href="#apache2-et-ses-modules" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>APACHE2 ET SES MODULES</h3>
+<p>// On active le mod deflate<br />
+    LoadModule deflate_module libexec/apache2/mod_deflate.so<br />
+    // On active le mod expire<br />
+    LoadModule expires_module libexec/apache2/mod_expires.so<br />
+    // On active le mod rewrite<br />
+    LoadModule rewrite_module libexec/apache2/mod_rewrite.so</p>
+<p>Avant d&rsquo;activer le mod_rewrite sur Apache2, il faut s&rsquo;assurer que le module est disponible sur votre serveur Debian Squeeze. </p>
+<p>Pour cela, nous allons tapez ces deux lignes en mode console et en utilisant le compte root: </p>
+<p>updatedb <br />
+locate mod_rewrite.so<br />
+Un résultat de se genre doit apparaître à l&rsquo;écran : </p>
+<p>/usr/lib/apache2/modules/mod_rewrite.so <br />
+/usr/lib/debug/usr/lib/apache2/modules/mod_rewrite.so </p>
+<p>Ici, il suffit d&rsquo;activer le mod_rewrite avec la commande suivante : </p>
+<p>a2enmod rewrite</p>
+<p>Si le fichier /etc/apache2/mods-available/rewrite.load n&rsquo;existe pas, il vous suffit d&rsquo;utiliser la commande suivante. </p>
+<p>command echo &ldquo;LoadModule rewrite_module /usr/lib/apache2/modules/mod_rewrite.so&rdquo; &gt; /etc/apache2/mods-available/rewrite.load a2enmod rewrite</p>
+<p>Ensuite, vérifiez dans le fichier de configuration Apache2 ( /etc/apache2/apache2.conf )de votre site si AllowOverride est avec l&rsquo;attribut All. </p>
+<p>Then open up the following file, and replace every occurrence of &ldquo;AllowOverride None&rdquo; with &ldquo;AllowOverride all&rdquo;.</p>
+<h3 id="apache2-et-module-userdir"><a name="user-content-apache2-et-module-userdir" href="#apache2-et-module-userdir" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>APACHE2 ET MODULE USERDIR</h3>
+<p>On active le module userdir d&rsquo;apache ( activation d&rsquo;apache pour chaque utilisateur de session )</p>
+<pre><code>sudo a2enmod userdir
+</code></pre>
+<p>On edite le fichier de configuration du module userdir d&rsquo;apache</p>
+<pre><code>sudo nano /etc/apache2/mods-enabled/userdir.conf
+</code></pre>
+<p>Et on verifie la config</p>
+<pre><code>&lt;IfModule mod_userdir.c&gt;
+    UserDir public_html
+    UserDir disabled root
+
+    &lt;Directory /home/*/public_html&gt;
+    AllowOverride All
+    Options MultiViews Indexes SymLinksIfOwnerMatch
+    &lt;Limit GET POST OPTIONS&gt;
+        # Apache &lt;= 2.2:
+            Order allow,deny
+            Allow from all
+
+            # Apache &gt;= 2.4:
+            #Require all granted
+    &lt;/Limit&gt;
+    &lt;LimitExcept GET POST OPTIONS&gt;
+        # Apache &lt;= 2.2:
+            Order deny,allow
+            Deny from all
+
+        # Apache &gt;= 2.4:
+        #Require all denied
+    &lt;/LimitExcept&gt;
+    &lt;/Directory&gt;
+&lt;/IfModule&gt;
+</code></pre>
+<p>On active PHP pour les utilisateurs en editant le fichier de configuration du module apache</p>
+<pre><code>sudo nano /etc/apache2/mods-available/php5.conf
+
+&lt;IfModule mod_php5.c&gt;
+&lt;FilesMatch "\.ph(p3?|tml)$"&gt;
+SetHandler application/x-httpd-php
+&lt;/FilesMatch&gt;
+&lt;FilesMatch "\.phps$"&gt;
+SetHandler application/x-httpd-php-source
+&lt;/FilesMatch&gt;
+# To re-enable php in user directories comment the following lines
+# (from &lt;IfModule ...&gt; to &lt;/IfModule&gt;.) Do NOT set it to On as it
+# prevents .htaccess files from disabling it.
+#&lt;IfModule mod_userdir.c&gt;
+#    &lt;Directory /home/*/public_html&gt;
+#        php_admin_value engine Off
+#    &lt;/Directory&gt;
+#&lt;/IfModule&gt;
+&lt;/IfModule&gt;
+</code></pre>
+<p>On redemarre le service apache2</p>
+<pre><code>sudo service apache2 restart
+</code></pre>
+<p>Le repertoire de dépose des sites est /home/username/public_html ( mkdir /home/phpinfo/public_html) et l&rsquo;accès se fait via <a href="http://127.0.0.1/~username/">http://127.0.0.1/~username/</a></p>
+<h3 id="apache2-et-sous-domaine"><a name="user-content-apache2-et-sous-domaine" href="#apache2-et-sous-domaine" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>APACHE2 ET SOUS DOMAINE</h3>
+<p>Pour créer un sous domaine editer le fichier <br />
+    nano /etc/apache2/sites-available/000-default.conf</p>
+<p>Et ajouter un autre virtualhost</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+ServerName site.local
+DocumentRoot "/Users/Sites/www"
+&lt;/VirtualHost&gt;
+</code></pre>
+<p>Puis il suffit de déclarer ce sous domaine dans le le fichie host du serveur </p>
+<pre><code>nano /etc/hosts
+</code></pre>
+<p>et ajouter à la fin</p>
+<pre><code>127.0.0.1  site.local
+</code></pre>
+<p>Dans le cas d&rsquo;une utilisation via virtualbox ne pas oublier de déclarer le nom de domaine sur l&rsquo;hôte tel que:</p>
+<pre><code>IPfixe_Invite site.local
+</code></pre>
+<h3 id="installer-un-dashboard-pour-controler-le-serveur-ajenti"><a name="user-content-installer-un-dashboard-pour-controler-le-serveur-ajenti" href="#installer-un-dashboard-pour-controler-le-serveur-ajenti" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>INSTALLER UN DASHBOARD POUR CONTROLER LE SERVEUR ( AJENTI )</h3>
+<p>Installer un dashboard pour serveur debian </p>
+<pre><code>wget -O- https://raw.github.com/ajenti/ajenti/1.x/scripts/install-debian.sh | sh
+</code></pre>
+<p>Pour Ubuntu</p>
+<pre><code>wget -O- https://raw.github.com/ajenti/ajenti/1.x/scripts/install-ubuntu.sh | sudo sh
+</code></pre>
+<p>Accès via <a href="https://localhost:8000">https://localhost:8000</a>  ( log : root, password: admin )</p>
+<p>Si via <a href="http://localhost:8000">http://localhost:8000</a> modifie le fichier nano /etc/ajenti/config.json et desactive ssl : ssl { enable :false ;} ( utile derrière virtualbox ).</p>
+<h3 id="un-serveur-ftp-pour-chaques-utilisateurs-du-serveur"><a name="user-content-un-serveur-ftp-pour-chaques-utilisateurs-du-serveur" href="#un-serveur-ftp-pour-chaques-utilisateurs-du-serveur" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Un SERVEUR FTP ( pour chaques utilisateurs du serveur )</h3>
+<pre><code>apt-get install vsftpd
+</code></pre>
+<p>On configure le serveur ftp:</p>
+<pre><code>nano /etc/vsftpd.conf
+
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022 # Le local_umask doit être le même que celui de suphp !!!
+ftpd_banner= Bienvenue sur mon serveur FTP
+chroot_local_user=YES # On bloque les utilisateurs dans leur répertoire. Ainsi, ils ne pourront plus remonter l'arborescence du serveur.
+</code></pre>
+<p>et on ajoute à la fin du fichier</p>
+<pre><code>allow_writeable_chroot=YES
+</code></pre>
+<p>On redemarre le serveur ftp</p>
+<pre><code>/etc/init.d/vsftpd restart*
+</code></pre>
+<p>Accès ftp://Utilisateur:MotDePasse@IPDuServeurFTP  ( utilisateur:motde passe d&rsquo;un utilisateur d&rsquo;une session sur le serveur ).</p></article></body></html>
