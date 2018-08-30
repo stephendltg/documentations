@@ -1,0 +1,39 @@
+/* Votre Style */
+
+ul {
+  background: #bbb;
+}
+li, [class*="grid"] > * {
+  background: #ccc;
+}
+header, footer {
+  background: #ddd;
+}
+main {
+  background: #eee;
+}
+aside {
+  background: #aaa;
+}
+
+
+
+.mygrid {
+
+	/* https://www.alsacreations.com/article/lire/1388-css3-grid-layout.html */
+
+	display: grid;
+
+	height: 200px;
+
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+    grid-column-gap: 1rem;
+
+	background-color: gray;  
+
+	justify-items: center;
+	align-items: center;
+}
+
+  

@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Titre du document</title>
+    <link rel="stylesheet" href="css/knacss.css" media="all">
+    <link rel="stylesheet" href="css/styles.css" media="all">
+  </head>
+  <body>
+    
+  <header id="header" role="banner" class="pam">
+  Lorem Elsass ipsum lacus leverwurscht Wurschtsalad mamsell Gal. gewurztraminer turpis, suspendisse commodo Oberschaeffolsheim ornare aliquam semper Miss Dahlias Mauris turpis sagittis kuglopf eleifend dignissim baeckeoffe geht's Richard Schirmeck mollis
+      habitant schnaps ante et sit leo schpeck sit Salu bissame Salut bisamme varius quam.
+  </header>
+  <div class="flex-container">
+    <aside class="mod w20 pam aside">
+      <nav id="navigation" role="navigation">
+        <ul class="pam">
+          <li class="pam inbl">Picon bière</li>
+          <li class="pam inbl">Melfor</li>
+          <li class="pam inbl">Carola</li>
+          <li class="pam inbl">Kuglof</li>
+          <li class="pam inbl">Wurscht</li>
+        </ul>
+      </nav>
+      <p>Lorem Salu bissame ! Wie geht's les samis ? Hans apporte moi une Wurschtsalad avec un picon bitte, s'il te plaît. Voss ? Une Carola et du Melfor ? Yo dû, espèce de Knäckes, ch'ai dit un picon !</p>
+    </aside>
+    <main id="main" role="main" class="flex-item-fluid pam">
+      <p>Yoo ch'ai lu dans les DNA que le Racing a encore perdu contre Oberschaeffolsheim. Verdammi et moi ch'avais donc parié deux knacks et une flammekueche. Ah so ? T'inquiète, ch'ai ramené du schpeck, du chambon, un kuglopf et du schnaps dans mon rucksack. Allez, s'guelt ! Wotch a kofee avec ton bibalaekaess et ta wurscht ? Yeuh non che suis au réchime, je ne mange plus que des Grumbeere light et che fais de la chym avec Chulien. Tiens, un rottznoz sur le comptoir.</p>
+      <p>Tu restes pour le lotto-owe ce soir, y'a baeckeoffe ? Yeuh non, merci vielmols mais che dois partir à la Coopé de Truchtersheim acheter des mänele et des rossbolla pour les gamins. Hopla tchao bissame ! Consectetur adipiscing elit amet elementum nullam bissame bredele Heineken picon bière gal sed risus, condimentum Verdammi ch'ai ac réchime météor barapli s'guelt quam, non Christkindelsmärik blottkopf, Carola tellus rucksack vielmols, Gal !</p>
+
+      <div class="mygrid">
+        <p>testetetsmlsm</p>
+        <p>mdlmdldmld</p>
+        <p>pourquoi</p>
+      </div>
+
+      <hr>
+
+      <h1>Vue example</h1>
+
+      <div id="app">
+        {{ message }}
+      </div>
+
+      <hr>
+
+      <h1>Fetch text example</h1>
+      <ul>
+        <li><a data-page="page1">Page 1</a></li>
+        <li><a data-page="page2">Page 2</a></li>
+        <li><a data-page="page3">Page 3</a></li>
+      </ul>
+      <article>
+      </article>
+
+      <hr>
+
+      <h1>Vue + fetch example</h1>
+
+      <div id="app-2">
+        {{ message }}
+        {{ fetch }}
+      </div>
+
+    </main>
+    <aside class="mod w20 pam aside">
+      <p>Lorem Salu bissame ! Wie geht's les samis ? Hans apporte moi une Wurschtsalad avec un picon bitte, s'il te plaît. Voss ? Une Carola et du Melfor ? Yo dû, espèce de Knäckes, ch'ai dit un picon !</p>
+    </aside>
+  </div>
+  <footer id="footer" role="contentinfo" class="pam">
+    Lorem Elsass ipsum lacus leverwurscht Wurschtsalad mamsell Gal. gewurztraminer turpis, suspendisse commodo Oberschaeffolsheim ornare aliquam semper Miss Dahlias Mauris turpis sagittis kuglopf eleifend dignissim baeckeoffe geht's Richard Schirmeck mollis habitant schnaps ante et sit leo schpeck sit Salu bissame Salut bisamme varius quam. amet elementum nullam bissame bredele Heineken picon bière gal sed risus, condimentum Verdammi ch'ai ac réchime météor barapli s'guelt quam, non Christkindelsmärik blottkopf, Carola tellus rucksack vielmols, Gal !
+  </footer>
+
+  <script src="js/vue.js"></script>
+
+  <script>
+
+    /* VUE */
+
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue! ' + new Date().toLocaleString()
+      }
+    });
+
+
+
+    var app2 = new Vue({
+
+      el: '#app-2',
+
+      data: {
+        message: 'wait .... '
+      },
+
+      computed: {
+
+        fetch: function(){
+          var vm = this
+          fetch('page1.txt')
+          .then(function(response) { console.log(response); return response.text() })
+          .then(function(text) { vm.message = text });
+
+        }
+      }
+        
+    });
+
+
+    /* FETCH */
+
+    var myArticle = document.querySelector('article');
+    var myLinks = document.querySelectorAll('ul a');
+
+    for(var i = 0; i <= myLinks.length - 1; i++) {
+      myLinks[i].onclick = function(e) {
+        e.preventDefault();
+        var linkData = e.target.getAttribute('data-page');
+        getData(linkData);
+      }
+    };
+
+    function getData(pageId) {
+      console.log(pageId);
+      var myRequest = new Request(pageId + '.txt');
+
+      fetch(myRequest)
+      .then(function(response) { return response.text() })
+      .then(function(text) {
+        myArticle.innerHTML = text;
+      });
+    }
+  </script>
+
+
+  </body>
+</html>
