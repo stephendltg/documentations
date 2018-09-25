@@ -30,7 +30,9 @@ Accès ftp://Utilisateur:MotDePasse@IPDuServeurFTP  ( utilisateur:motde passe d
 
 ## docker sur debian
 
-sudo apt-get install -y docker.io
+sudo curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+
+
 
 
 
