@@ -570,25 +570,20 @@ Si via http://localhost:8000 modifie le fichier nano /etc/ajenti/config.json et 
 
 ### Un SERVEUR FTP ( pour chaques utilisateurs du serveur )
 
-    apt-get install vsftpd
+    sudo apt install proftpd
 
 On configure le serveur ftp:
 
-    nano /etc/vsftpd.conf
+    nano /etc/proftpd/proftpd.conf
     
-    anonymous_enable=NO
-    local_enable=YES
-    write_enable=YES
-    local_umask=022 # Le local_umask doit être le même que celui de suphp !!!
-    ftpd_banner= Bienvenue sur mon serveur FTP
-    chroot_local_user=YES # On bloque les utilisateurs dans leur répertoire. Ainsi, ils ne pourront plus remonter l'arborescence du serveur.
+    Premiere ligne correspond au time out apres laquelle l'utilisateur sera automatiquement déconnecte
     
-et on ajoute à la fin du fichier
-
-    allow_writeable_chroot=YES
+    Pour limiter l'acces uniquement au dossier de l'utilisateur décommenter la ligne suivante:
+    # DefaultRoot
+    
     
 On redemarre le serveur ftp
 
-    /etc/init.d/vsftpd restart*
+    sudo service proftpd reload
     
 Accès ftp://Utilisateur:MotDePasse@IPDuServeurFTP  ( utilisateur:motde passe d'un utilisateur d'une session sur le serveur ).
