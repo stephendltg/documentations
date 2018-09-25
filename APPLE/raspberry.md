@@ -37,5 +37,6 @@ sudo apt-get install -y docker.io
 
 
 ## installation docker compose
+sudo apt-get install docker-compose
 
 
