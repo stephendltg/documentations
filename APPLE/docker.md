@@ -1,4 +1,6 @@
-#docker
+#docker sur debian
+
+sudo apt-get install -y docker.io
 
 
 
