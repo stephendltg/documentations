@@ -1,0 +1,73 @@
+# DOCKER COMPOSE
+
+Docker Compose est un outil permettant d'exécuter des applications multi-conteneurs sur Docker définies à l'aide du format de fichier Compose . Un fichier Compose est utilisé pour définir comment le ou les conteneurs qui composent votre application sont configurés. Une fois que vous avez un fichier Compose, vous pouvez créer et démarrer votre application avec une seule commande : docker-compose up.
+
+## INSTALLATION
+
+### Windows et macOS
+Docker Compose est inclus dans Docker Desktop pour Windows et macOS.
+
+### LINUX
+``` bash
+$ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+```
+
+### BASIC
+
+``` yaml
+# docker-compose.yml
+version: '2'
+
+services:
+  web:
+    build: .
+    # build from Dockerfile
+    context: ./Path
+    dockerfile: Dockerfile
+    ports:
+     - "5000:5000"
+    volumes:
+     - .:/code
+  redis:
+    image: redis
+```
+
+## COMMANDS
+
+### BASICS
+``` bash
+$ docker-compose  build              Build or rebuild services
+$ docker-compose  bundle             Generate a Docker bundle from the Compose file
+$ docker-compose  config             Validate and view the Compose file
+$ docker-compose  create             Create services
+$ docker-compose  down               Stop and remove containers, networks, images, and volumes
+$ docker-compose  events             Receive real time events from containers
+$ docker-compose  exec               Execute a command in a running container
+$ docker-compose  images             List images
+$ docker-compose  kill               Kill containers
+$ docker-compose  logs               View output from containers
+$ docker-compose  pause              Pause services
+$ docker-compose  port               Print the public port for a port binding
+$ docker-compose  ps                 List containers
+$ docker-compose  pull               Pull service images
+$ docker-compose  push               Push service images
+$ docker-compose  restart            Restart services
+$ docker-compose  rm                 Remove stopped containers
+$ docker-compose  run                Run a one-off command
+$ docker-compose  scale              Set number of containers for a service
+$ docker-compose  start              Start services
+$ docker-compose  stop               Stop services
+$ docker-compose  top                Display the running processes
+$ docker-compose  unpause            Unpause services
+$ docker-compose  up                 Create and start containers
+$ docker-compose  version            Show the Docker-Compose version information
+```
+
+### OTHERS
+``` bash
+$ docker-compose up -d      // deploy docker compose
+$ docker-compose down -v    // stop docker compose & remove volumes
+$ docker-compose down -v --rmi all --remove-orphans // stop docker compose & remove volumes & remove network & remove images
+```
+
